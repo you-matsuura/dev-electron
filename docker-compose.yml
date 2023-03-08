@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  nodejs:
+    image: node:18.14.2-alpine
+    volumes:
+        - .:/dev-app:delegated
+    tty: true
+    ports: 
+      - "3701:3000"
+    working_dir: /dev-app
